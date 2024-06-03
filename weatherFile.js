@@ -59,9 +59,7 @@ function dateBuilder(d) {
 function changeBackground(temp) {
     let appOutline = document.querySelector('.app-outline');
 
-    if (temp < 0) {
-        appOutline.style.backgroundImage = "url('bg2.gif')";
-    } else if (temp >= 0 && temp <= 7) {
+    if (temp < 8) {
         appOutline.style.backgroundImage = "url('olafcold.gif')";
     } else if (temp >= 8 && temp <= 15) {
         appOutline.style.backgroundImage = "url('calm-city.gif')";
@@ -69,8 +67,10 @@ function changeBackground(temp) {
         appOutline.style.backgroundImage = "url('warmest.gif')";
     } else if (temp >= 26 && temp <= 40) {  
         appOutline.style.backgroundImage = "url('hottest.gif')";
-    } else {
-        appOutline.style.backgroundImage = "url('p2j.gif')";
+    } else if (temp > 40)
+        appOutline.style.backgroundImage = "url('evenhotter.gif')";
+    } else { 
+        appOutline.style.backgroundImage = "url('p2j.gif')";   
     }
 }
 
