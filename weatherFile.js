@@ -67,7 +67,7 @@ function changeBackground(temp) {
         appOutline.style.backgroundImage = "url('warmest.gif')";
     } else if (temp >= 26 && temp <= 34) {  
         appOutline.style.backgroundImage = "url('hottest.gif')";
-    } else if (temp > 35) {
+    } else if (temp => 35) {
         appOutline.style.backgroundImage = "url('evenhotter.gif')";
     } else { 
         appOutline.style.backgroundImage = "url('p2j.gif')";   
